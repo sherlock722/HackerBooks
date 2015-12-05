@@ -9,20 +9,27 @@
 import Foundation
 
 //Implementamos el protocolo Equatable
-//(para ver si dos objetos son equivalentes). Este protocolo puede
+//para ver si dos objetos son equivalentes. Este protocolo puede
 //servir para ordenar
+
+
+
+//Implementamos el protocolo Comparable
+//para ver si un objeto es >, <, >= ó <=.
+//En este caso se implementa sólo <, ya que el resto el 
+//compilador es capaz de deducirlos
 
 class AGTBook : Equatable, Comparable {
     
-    let titulo    : String?
-    let autores   : NSArray
-    let tags      : NSArray
-    let imageBook : NSURL
-    let pdfBook   : NSURL
+    let titulo    : String //String
+    let autores   : NSArray //NSArray
+    let tags      : NSArray //NSArray
+    let imageBook : NSURL //NSURL
+    let pdfBook   : NSURL //NSURL
     
 
     //MARK: - Init
-    init (titulo : String?,
+    init (titulo : String,
         autores  : NSArray,
         tags     : NSArray,
         imageBook: NSURL,
@@ -80,9 +87,12 @@ extension AGTBook : CustomStringConvertible{
      
         get{
             
-            if let titulo = titulo {
+            if self.titulo == titulo {
+                
                 return "<\(self.dynamicType): \(titulo)>"
-            }else{
+            
+            } else {
+            
                 return "<\(self.dynamicType)>"
             }
             
