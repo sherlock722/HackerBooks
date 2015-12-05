@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AGTBook:NSObject {
+class AGTBook {
     
     let titulo    : String
     let autores   : NSArray
@@ -45,3 +45,10 @@ class AGTBook:NSObject {
     }*/
 
 }
+
+//Implementamos a través de una extensión el protocolo Equatable
+//extension AGTBook:Equatable{
+    
+    
+    
+//}

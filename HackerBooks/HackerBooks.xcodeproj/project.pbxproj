@@ -14,6 +14,7 @@
 		3B1F18021C0CFEE800B4DE49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1F18001C0CFEE800B4DE49 /* LaunchScreen.storyboard */; };
 		3B1F180D1C0CFEE800B4DE49 /* HackerBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F180C1C0CFEE800B4DE49 /* HackerBooksTests.swift */; };
 		3B1F181A1C0D040400B4DE49 /* AGTBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F18191C0D040400B4DE49 /* AGTBook.swift */; };
+		3B4284A31C0E56F800D08A5D /* books_readable.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B4284A21C0E56F800D08A5D /* books_readable.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		3B1F180C1C0CFEE800B4DE49 /* HackerBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerBooksTests.swift; sourceTree = "<group>"; };
 		3B1F180E1C0CFEE800B4DE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B1F18191C0D040400B4DE49 /* AGTBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGTBook.swift; sourceTree = "<group>"; };
+		3B4284A21C0E56F800D08A5D /* books_readable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books_readable.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		3B1F18171C0D009400B4DE49 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3B4284A11C0E565600D08A5D /* Resources */,
 				3B1F18181C0D03DA00B4DE49 /* Models */,
 				3B1F17F71C0CFEE800B4DE49 /* AppDelegate.swift */,
 				3B1F17F91C0CFEE800B4DE49 /* ViewController.swift */,
@@ -113,6 +116,14 @@
 				3B1F18191C0D040400B4DE49 /* AGTBook.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		3B4284A11C0E565600D08A5D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3B4284A21C0E56F800D08A5D /* books_readable.json */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4284A31C0E56F800D08A5D /* books_readable.json in Resources */,
 				3B1F18021C0CFEE800B4DE49 /* LaunchScreen.storyboard in Resources */,
 				3B1F17FF1C0CFEE800B4DE49 /* Assets.xcassets in Resources */,
 				3B1F17FD1C0CFEE800B4DE49 /* Main.storyboard in Resources */,
@@ -406,6 +418,7 @@
 				3B1F18131C0CFEE800B4DE49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B1F18141C0CFEE800B4DE49 /* Build configuration list for PBXNativeTarget "HackerBooksTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +427,7 @@
 				3B1F18161C0CFEE800B4DE49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
