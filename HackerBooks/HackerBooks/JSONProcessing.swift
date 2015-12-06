@@ -51,10 +51,22 @@ enum JSONKeys : String {
     
 }
 
+//MARK - Structs
+struct StrictAGTBook {
+    
+    let titulo    : String //String
+    let autores   : NSArray //NSArray
+    let tags      : NSArray //NSArray
+    let imageBook : NSURL //NSURL
+    let pdfBook   : NSURL //NSURL
+    
+}
+
+
 //MARK - Decoding
 
 //Se coge un diccionario del JSON y se convierte en un objeto AGTBook
-func decode (agtBook jsonDictionary : JSONDictionary) throws -> AGTBook {
+func decode (agtBook jsonDictionary : JSONDictionary) throws -> StrictAGTBook {//-> AGTBook {
     
     //El diccionario que me llega puede estar lleno de errores, por lo que tenemos que controlar los posibles problemas con guard
     
@@ -87,10 +99,12 @@ func decode (agtBook jsonDictionary : JSONDictionary) throws -> AGTBook {
     
     //Se extrae del JSON los parametros que no vamos a comprobar (En este caso authors y tags)
     
-    //Revisar
+    //¿?
     //let authors  = (jsonDictionary [JSONKeys.authors.rawValue] as? NSArray)!
     //let tags  = (jsonDictionary [JSONKeys.tags.rawValue] as? NSArray)!
     
+    
+    //Que authors y tags no sean NSArray
     guard let authors  = jsonDictionary [JSONKeys.authors.rawValue] as? NSArray else{
         
         throw JSONProcessingErrors.WrongJSONFormat
@@ -103,14 +117,23 @@ func decode (agtBook jsonDictionary : JSONDictionary) throws -> AGTBook {
     
     
     //Se crea el AGTBook
-    //Revisar
-    return AGTBook.init(titulo: title,
+    /*return AGTBook.init(titulo: title,
+        autores: authors,
+        tags: tags,
+        imageBook: image_url,
+        pdfBook: pdf_url)*/
+    
+    //Se crea el StrictAGTBook
+    return StrictAGTBook.init(titulo: title,
         autores: authors,
         tags: tags,
         imageBook: image_url,
         pdfBook: pdf_url)
     
     }
+
+//Se necesita otro decode, para descodificar un Array de diccionarios de AGTBook
+
 
 
 
