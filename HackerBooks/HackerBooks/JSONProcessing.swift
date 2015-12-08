@@ -133,6 +133,102 @@ func decode (agtBook jsonDictionary : JSONDictionary) throws -> StrictAGTBook {/
     }
 
 //Se necesita otro decode, para descodificar un Array de diccionarios de AGTBook
+//Lo tengo que convertir en un Array de StrictAGTBook
+func decode (agtBooks json : JSONArray) -> [StrictAGTBook]{
+    
+    //Creo un array vacio para guardar los StrictAGTBook
+    var results = [StrictAGTBook]()
+    
+    do{
+    
+        //Recorrer el JSONArray
+        for dict in json{
+        
+            //JSONDict que veo, se convierte en StrictAGTBook (lo hace el decode de arriba)
+            let book = try (decode(agtBook: dict))
+        
+            //Lo guardo en el array
+            results.append((book))
+        
+        }
+    }catch{
+        
+        print ("Error al convertir el JSONDictionarty a StrictAGTBook")
+        fatalError()
+    }
+    
+    //Devuelvo el Array de StrictAGTBook
+    return results
+    
+}
+
+
+
+//Inicializador de conveniencia para cuando pasamos un StrictAGTBook
+//MARK: - Initialization AGTBook
+
+extension AGTBook {
+    
+    //Init que acepta los parametros empaquetados en un StrictAGTBook
+    convenience init (strictAGTBook c:StrictAGTBook){
+        
+        //Llamar al inicializador designado pasandole el StrictAGTBook
+        self.init(titulo : c.titulo,
+        autores  : c.autores,
+        tags     : c.tags,
+        imageBook: c.imageBook,
+        pdfBook  : c.pdfBook)
+        
+        
+    }
+    
+}
+
+extension AGTLibrary{
+    
+    
+    //Init que convierte un Array de StrictAGTBook y devuelve un AGTLibrary
+    convenience init (books bks: [StrictAGTBook]){
+        
+        var books = [AGTBook]()
+        //Recorrer el array de StrictAGTBook
+        for book in bks {
+            
+            //Lo transformo en AGTBook
+            let c = AGTBook (strictAGTBook: book)
+            //Lo guardo en un array
+            books.append(c)
+            
+        }
+        //Le paso el array al init de AGTLibrary para que me cree el modelo AGTLibrary
+        
+            //self.init (arrayOfBooks:books)
+        
+    }
+        
+        
+        
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

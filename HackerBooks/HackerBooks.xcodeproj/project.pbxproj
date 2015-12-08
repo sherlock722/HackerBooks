@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3B1F17F81C0CFEE800B4DE49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F17F71C0CFEE800B4DE49 /* AppDelegate.swift */; };
 		3B1F17FA1C0CFEE800B4DE49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F17F91C0CFEE800B4DE49 /* ViewController.swift */; };
-		3B1F17FD1C0CFEE800B4DE49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1F17FB1C0CFEE800B4DE49 /* Main.storyboard */; };
 		3B1F17FF1C0CFEE800B4DE49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1F17FE1C0CFEE800B4DE49 /* Assets.xcassets */; };
 		3B1F18021C0CFEE800B4DE49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1F18001C0CFEE800B4DE49 /* LaunchScreen.storyboard */; };
 		3B1F180D1C0CFEE800B4DE49 /* HackerBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F180C1C0CFEE800B4DE49 /* HackerBooksTests.swift */; };
@@ -17,6 +16,9 @@
 		3B4284A31C0E56F800D08A5D /* books_readable.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B4284A21C0E56F800D08A5D /* books_readable.json */; };
 		3BAE67A41C136F4700D8AC29 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE67A31C136F4700D8AC29 /* JSONProcessing.swift */; };
 		3BB93C221C1428F9002357D1 /* AGTLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB93C211C1428F9002357D1 /* AGTLibrary.swift */; };
+		3BD6D4421C173238001BABAE /* AGTLibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6D4411C173238001BABAE /* AGTLibraryTableViewController.swift */; };
+		3BD6D4451C173368001BABAE /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6D4441C173368001BABAE /* Library.storyboard */; };
+		3BD6D4481C17359C001BABAE /* FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6D4471C17359C001BABAE /* FoundationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +35,6 @@
 		3B1F17F41C0CFEE700B4DE49 /* HackerBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1F17F71C0CFEE800B4DE49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B1F17F91C0CFEE800B4DE49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3B1F17FC1C0CFEE800B4DE49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B1F17FE1C0CFEE800B4DE49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B1F18011C0CFEE800B4DE49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B1F18031C0CFEE800B4DE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +45,9 @@
 		3B4284A21C0E56F800D08A5D /* books_readable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books_readable.json; sourceTree = "<group>"; };
 		3BAE67A31C136F4700D8AC29 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
 		3BB93C211C1428F9002357D1 /* AGTLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGTLibrary.swift; sourceTree = "<group>"; };
+		3BD6D4411C173238001BABAE /* AGTLibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGTLibraryTableViewController.swift; sourceTree = "<group>"; };
+		3BD6D4441C173368001BABAE /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
+		3BD6D4471C17359C001BABAE /* FoundationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		3B1F17F61C0CFEE800B4DE49 /* HackerBooks */ = {
 			isa = PBXGroup;
 			children = (
+				3BD6D4461C173580001BABAE /* Framework */,
 				3B1F18171C0D009400B4DE49 /* App */,
 			);
 			path = HackerBooks;
@@ -102,13 +107,13 @@
 		3B1F18171C0D009400B4DE49 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3BD6D4431C173301001BABAE /* Storyboards */,
+				3BD6D4401C1731E3001BABAE /* Controllers */,
 				3B4284A11C0E565600D08A5D /* Resources */,
 				3B1F18181C0D03DA00B4DE49 /* Models */,
 				3B1F17F71C0CFEE800B4DE49 /* AppDelegate.swift */,
 				3B1F17F91C0CFEE800B4DE49 /* ViewController.swift */,
-				3B1F17FB1C0CFEE800B4DE49 /* Main.storyboard */,
 				3B1F17FE1C0CFEE800B4DE49 /* Assets.xcassets */,
-				3B1F18001C0CFEE800B4DE49 /* LaunchScreen.storyboard */,
 				3B1F18031C0CFEE800B4DE49 /* Info.plist */,
 			);
 			name = App;
@@ -130,6 +135,31 @@
 				3B4284A21C0E56F800D08A5D /* books_readable.json */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		3BD6D4401C1731E3001BABAE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BD6D4411C173238001BABAE /* AGTLibraryTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3BD6D4431C173301001BABAE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F18001C0CFEE800B4DE49 /* LaunchScreen.storyboard */,
+				3BD6D4441C173368001BABAE /* Library.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		3BD6D4461C173580001BABAE /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				3BD6D4471C17359C001BABAE /* FoundationExtension.swift */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +245,8 @@
 			files = (
 				3B4284A31C0E56F800D08A5D /* books_readable.json in Resources */,
 				3B1F18021C0CFEE800B4DE49 /* LaunchScreen.storyboard in Resources */,
+				3BD6D4451C173368001BABAE /* Library.storyboard in Resources */,
 				3B1F17FF1C0CFEE800B4DE49 /* Assets.xcassets in Resources */,
-				3B1F17FD1C0CFEE800B4DE49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,9 +266,11 @@
 			files = (
 				3B1F17FA1C0CFEE800B4DE49 /* ViewController.swift in Sources */,
 				3B1F17F81C0CFEE800B4DE49 /* AppDelegate.swift in Sources */,
+				3BD6D4421C173238001BABAE /* AGTLibraryTableViewController.swift in Sources */,
 				3BAE67A41C136F4700D8AC29 /* JSONProcessing.swift in Sources */,
 				3BB93C221C1428F9002357D1 /* AGTLibrary.swift in Sources */,
 				3B1F181A1C0D040400B4DE49 /* AGTBook.swift in Sources */,
+				3BD6D4481C17359C001BABAE /* FoundationExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3B1F17FB1C0CFEE800B4DE49 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B1F17FC1C0CFEE800B4DE49 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3B1F18001C0CFEE800B4DE49 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

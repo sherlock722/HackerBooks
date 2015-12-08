@@ -15,6 +15,7 @@ import Foundation
 class AGTLibrary {
     
     
+    
     //MARK: - Private Interface
     
     //Array de tags con todas las distintas tematicas en
@@ -30,7 +31,7 @@ class AGTLibrary {
     
     
     //MARK: - Initialization
-    init (arrayOfBooks: [AGTBook]){
+    /*init (arrayOfBooks: [AGTBook]){
         
         //Se inicializa la propiedad books y se le meten libros
         var books = Dictionary<String,Array<AGTBook>>()
@@ -52,7 +53,7 @@ class AGTLibrary {
             
         }
         
-    }
+    }*/
     
     
     

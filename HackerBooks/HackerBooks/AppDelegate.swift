@@ -12,10 +12,43 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var model : AGTLibrary? //Lo hacemos opcional para que NO muestre el error de inicialización
+    
+    var sb : UIStoryboard?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Recupero los datos del JSON con JSONSerialization
+        do{
+            
+        
+            if let url = NSBundle.mainBundle().URLForResosurce("books_readable.json"), data = NSData(contentsOfURL: url), json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONArray{
+            
+                self.model = AGTLibrary (books: decode(agtBooks: json))
+            
+            }
+            
+        }catch{
+            
+            //print ("Error al leer JSON")
+            fatalError("Error al crear el modelo")
+            //Como model se queda al entrar por e catch sin asignar nos da error de inicializacion
+            //La solución es crear la var model como opcional (que es la que vamos a usar)
+            //y la otra solución es crear un modelo vacio
+        }
+        
+        
+        //Crear la interfaz grafica (storyboard)
+        sb = UIStoryboard(name: "Library", bundle: nil)
+        
+        window = UIWindow (frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = sb?.instantiateInitialViewController()
+        window?.makeKeyAndVisible()
+        
+        
+        
         return true
     }
 
