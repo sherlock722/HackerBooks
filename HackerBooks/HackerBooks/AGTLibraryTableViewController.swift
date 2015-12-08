@@ -11,25 +11,52 @@ import UIKit
 class AGTLibraryTableViewController: UITableViewController {
 
     
-    
     //Funcion que extrae el JSON de Libros y devuelve un Array de su representacion estricta
     
-    /*private func decodeJSON() -> [StrictAGTBook]{
-    
+    private func decodeJSON() -> [StrictAGTBook]?{ //[StrictAGTBook]
+        
+        //Obtener la URL del fichero (puede salir mal)
+        //Se recupera la información de JSON y lo pasamos a un NSData (puede salir mal)
+        //Se parsea
+        let results : [StrictAGTBook]? = nil
+        //let results = [StrictAGTBook] ()
         
         
+        do{
+            if let url = NSBundle.mainBundle().URLForResosurce("books_readable.json"), data = NSData(contentsOfURL: url), booksArray = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONArray{
+                
+                //Todo OK
+                return decode(agtBooks: booksArray)
+                
+                
+            }
+        }catch{
+            //Error al parsear el JSON
+            print ("Error al parsear el JSON")
+            //fatalError()
+            
+        }
+        return results
         
-        
-    }*/
+    }
     
     
     //Crear un let al modelo y se le define el valor por defecto (se inicializa)
+    //Crear el modelo de AGTLibrary
+    var model : AGTLibrary?
     
-    //let model : AGTLibrary = AGTLibrary(books: decodeJSON())
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Crear el modelo
+        if let books = decodeJSON(){//Si fuera un opcional
+        
+            model = AGTLibrary (books: books) //model es un opcional
+        }else {
+            
+            print ("Error al desempaquetar el modelo")
+        }
         
     }
 
@@ -49,6 +76,9 @@ class AGTLibraryTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+    
+    
+    
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
