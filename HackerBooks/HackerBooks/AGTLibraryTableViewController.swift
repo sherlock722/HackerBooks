@@ -69,26 +69,61 @@ class AGTLibraryTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+       
+        return (model?.tagsCount)!
+        
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
+        //Sacar el tag
+        
+        let ip = self.tableView.indexPathForSelectedRow
+        let book = model![(ip?.row)!, inTag:tagName(index: (ip?.section)!)]
+
+        
+        //return (model?.bookCountForTag(book?.tags).description
         return 0
     }
     
     
+    //Implementamos el siguiente método
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        //COMPLETAR
+        return nil
+    }
+    
     
 
-    /*
+    //Celda
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        
+        let cellId="AGTBookCell"
+        
+        
         // Configure the cell...
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellId)
 
-        return cell
+
+        if cell == nil {
+
+            //Creo la celda
+            cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
+        }
+        
+        //obtener el libro
+        let book = model![indexPath.row, inTag:tagName(index: indexPath.section)]
+        
+        //Configurar la celda
+            cell?.textLabel?.text=book?.titulo
+            //cell?.detailTextLabel?.text=book?.
+        
+        
+        return cell!
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -134,5 +169,33 @@ class AGTLibraryTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: - Segues
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        
+        return true
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //Sender : En nuestro caso es la celda que produce la accion de ir al controlador detalle del
+        //book
+        
+        //Mandamos al controlador destino, en este caso el detalle del book el modelo
+        
+        //Averiguar si el segue en cuestion es el correcto
+        if segue.identifier == "showBook"{
+            
+            //Cual es el controlador destino
+            let destVC=segue.destinationViewController as? BookViewController
+            
+            let ip = self.tableView.indexPathForSelectedRow
+            let book = model![(ip?.row)!, inTag:tagName(index: (ip?.section)!)]
+            destVC?.model = book
+        
+        }
 
+
+    }
 }

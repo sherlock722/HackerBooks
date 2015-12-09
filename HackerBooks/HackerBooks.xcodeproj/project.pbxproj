@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0C17541C18DDFB00B37505 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0C17531C18DDFB00B37505 /* BookViewController.swift */; };
 		3B1F17F81C0CFEE800B4DE49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F17F71C0CFEE800B4DE49 /* AppDelegate.swift */; };
 		3B1F17FA1C0CFEE800B4DE49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F17F91C0CFEE800B4DE49 /* ViewController.swift */; };
 		3B1F17FF1C0CFEE800B4DE49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1F17FE1C0CFEE800B4DE49 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B0C17531C18DDFB00B37505 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		3B1F17F41C0CFEE700B4DE49 /* HackerBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1F17F71C0CFEE800B4DE49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B1F17F91C0CFEE800B4DE49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				3BD6D4411C173238001BABAE /* AGTLibraryTableViewController.swift */,
+				3B0C17531C18DDFB00B37505 /* BookViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				3BD6D4421C173238001BABAE /* AGTLibraryTableViewController.swift in Sources */,
 				3BAE67A41C136F4700D8AC29 /* JSONProcessing.swift in Sources */,
 				3BB93C221C1428F9002357D1 /* AGTLibrary.swift in Sources */,
+				3B0C17541C18DDFB00B37505 /* BookViewController.swift in Sources */,
 				3B1F181A1C0D040400B4DE49 /* AGTBook.swift in Sources */,
 				3BD6D4481C17359C001BABAE /* FoundationExtension.swift in Sources */,
 			);

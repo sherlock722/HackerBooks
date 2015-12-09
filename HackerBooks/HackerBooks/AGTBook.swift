@@ -145,7 +145,11 @@ func < (lhs: AGTBook, rhs: AGTBook) -> Bool {
 
 
 
-
+//MARK: - Datos para el controlador
+func tagName (index i : Int)->String{
+    
+    
+}
 
 
 
