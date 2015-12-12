@@ -17,6 +17,8 @@
 		3B4284A31C0E56F800D08A5D /* books_readable.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B4284A21C0E56F800D08A5D /* books_readable.json */; };
 		3BAE67A41C136F4700D8AC29 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE67A31C136F4700D8AC29 /* JSONProcessing.swift */; };
 		3BB93C221C1428F9002357D1 /* AGTLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB93C211C1428F9002357D1 /* AGTLibrary.swift */; };
+		3BC7CF5A1C1A2AEE000408F6 /* AGTBookTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC7CF591C1A2AEE000408F6 /* AGTBookTag.swift */; };
+		3BC7CF5C1C1A39EA000408F6 /* AGTMultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC7CF5B1C1A39EA000408F6 /* AGTMultiDictionary.swift */; };
 		3BD6D4421C173238001BABAE /* AGTLibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6D4411C173238001BABAE /* AGTLibraryTableViewController.swift */; };
 		3BD6D4451C173368001BABAE /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6D4441C173368001BABAE /* Library.storyboard */; };
 		3BD6D4481C17359C001BABAE /* FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6D4471C17359C001BABAE /* FoundationExtension.swift */; };
@@ -47,6 +49,8 @@
 		3B4284A21C0E56F800D08A5D /* books_readable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books_readable.json; sourceTree = "<group>"; };
 		3BAE67A31C136F4700D8AC29 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
 		3BB93C211C1428F9002357D1 /* AGTLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGTLibrary.swift; sourceTree = "<group>"; };
+		3BC7CF591C1A2AEE000408F6 /* AGTBookTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGTBookTag.swift; sourceTree = "<group>"; };
+		3BC7CF5B1C1A39EA000408F6 /* AGTMultiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGTMultiDictionary.swift; sourceTree = "<group>"; };
 		3BD6D4411C173238001BABAE /* AGTLibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGTLibraryTableViewController.swift; sourceTree = "<group>"; };
 		3BD6D4441C173368001BABAE /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		3BD6D4471C17359C001BABAE /* FoundationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtension.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				3B1F18191C0D040400B4DE49 /* AGTBook.swift */,
 				3BAE67A31C136F4700D8AC29 /* JSONProcessing.swift */,
 				3BB93C211C1428F9002357D1 /* AGTLibrary.swift */,
+				3BC7CF591C1A2AEE000408F6 /* AGTBookTag.swift */,
+				3BC7CF5B1C1A39EA000408F6 /* AGTMultiDictionary.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -267,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC7CF5C1C1A39EA000408F6 /* AGTMultiDictionary.swift in Sources */,
 				3B1F17FA1C0CFEE800B4DE49 /* ViewController.swift in Sources */,
 				3B1F17F81C0CFEE800B4DE49 /* AppDelegate.swift in Sources */,
 				3BD6D4421C173238001BABAE /* AGTLibraryTableViewController.swift in Sources */,
+				3BC7CF5A1C1A2AEE000408F6 /* AGTBookTag.swift in Sources */,
 				3BAE67A41C136F4700D8AC29 /* JSONProcessing.swift in Sources */,
 				3BB93C221C1428F9002357D1 /* AGTLibrary.swift in Sources */,
 				3B0C17541C18DDFB00B37505 /* BookViewController.swift in Sources */,
